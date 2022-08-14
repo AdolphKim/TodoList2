@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/style.css">
+    <script src="https://kit.fontawesome.com/4a84dbfbba.js" crossorigin="anonymous"></script>
+</head>
+<body>
+    <header>
+    <form action="" id ="loginForm">
+        <input type="text" 
+        placeholder="이름을 말해주세요 !" 
+        id="loginInput"
+        required maxlength="15">
+        <button id="loginButton">Login</button>
+        
+    </form>
+    <h1 id="greeting" class ="hidden"></h1>
+    <div class="clockBox">
+    <p>현재 시각</p>
+    <h1 id="clock">00:00:00</h1>
+    </div>
+    <div class="quoteBox">
+    <h1 id="quote">quote</h1>
+    <h1 id="author">author</h1>
+    </div>
+    <button class="movePages">></button>
+    </header>
+    <main>
+        <div class="todoBox">
+            <div class="todoFormBox">
+                <form action="" id = "todoForm">
+                    <input type="text"
+                    placeholder="오늘의 할일"
+                    id = "todoInput"
+                    required>
+                    <button id="todoButton">입력</button>
+                </form>
+                <button id="clearButton">모두삭제</button>
+            </div>
+        
+        <ul class="todoListArray">
+            <h1 class="guideText">TODOLIST 를 작성해보세요</h1>
+        </ul>
+        </div>
+        <div class="subBox">
+            <h1 class="linkBoxTitle">바로가기</h1>
+            <div class="linkBox">
+                <li><a href ="https://www.youtube.com/"><i class="fab fa-youtube"></i></i>YOUTUBE</a></li>
+                <li><a href ="https://github.com/"><i class="fab fa-github"></i>GITHUB</a></li>
+            </div>
+        </div>
+    </main>
+    <script src="/js/greeting.js"></script>
+    <script src="/js/clock.js"></script>
+    <script src="/js/quote.js"></script>
+    <script src="/js/todo.js"></script>
+</body>
+</html>

@@ -1,0 +1,262 @@
+@import "reset.css";
+@import url('https://fonts.googleapis.com/css2?family=Nanum+Pen+Script&display=swap');
+*{
+    font-family: 'Nanum Pen Script', cursive;
+    font-weight: 400;
+}
+button{
+    border:none;
+    background-color: rgb(255, 224, 224)
+}
+
+button:hover{
+    border : 1px solid rgba(0,0,0,0.2);
+}
+
+html{
+    font-size : 10px;
+    height : 100vh;
+    
+}
+
+.hidden{
+    display:none;
+}
+
+::-webkit-scrollbar{
+    display :none;
+}
+
+.imgBox{
+    position : absolute;
+    z-index: -3;
+    width:100vw;
+    height:100vh;
+    background-image: url(/img/wallpaperbetter.jpg);
+    background-repeat:no-repeat;
+    background-size: 100%;
+}
+a{
+    text-decoration: none;
+    font-style: none;
+    color:black;
+}
+/*header*/
+
+header{
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(248, 246, 141,0.3);
+    padding : 1% 2%;
+    height : 10vh;
+}
+
+#loginForm{
+    width : 33%;
+}
+
+#loginInput{
+    border :none;
+    border-bottom : 1px solid rgba(0,0,0,0.2);
+    padding-bottom : 1vh;
+    outline: none;
+    font-weight:bold;
+}
+
+#loginInput::placeholder{
+    font-weight : bold;
+}
+
+#loginButton{
+    border:none;
+    background-color: rgba(0,0,0,0.2);
+    border-radius: 5px;
+    padding:0.5vh 1vw;
+    margin-left : 0.2vw;
+}
+
+#greeting{
+    font-size : 3.2rem;
+    width : 33%;
+    text-align: start;
+}
+
+#clock{
+    font-size : 4.8rem;
+}
+.clockBox{
+    width : 33%;
+    text-align: center;
+}
+
+.clockBox > p{
+    font-weight : bold;
+    font-size : 2.4rem;
+}
+
+.quoteBox{
+    display :flex;
+    flex-direction: column;
+    align-items: flex-end;
+    width : 33%;
+}
+
+#quote{
+    font-size : 3.2rem;
+}
+
+#author{
+    font-size : 2.4rem;
+    color : rgba(0,0,0,0.6);
+}
+
+.movePages{
+    display:none;
+}
+
+
+/* main */
+main{
+    padding : 2% 2%;
+    display:flex;
+    overflow: hidden;
+    height : 75vh;
+    background-color: rgba(255,255,255,0.3);
+}
+
+#todoInput{
+    margin-bottom : 1.5vh;
+    font-size : 2.4rem;
+}
+
+#todoButton{
+    font-size : 2.4rem;
+}
+
+.todoBox{
+    width:50%;
+    height : 100vh;
+    border-right : 1px solid black;
+}
+.todoFormBox{
+    display:flex;
+    width:100%;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+#clearButton{
+        font-size : 2.4rem;
+        margin-top : 0.2rem;
+        margin-right : 1rem;
+}
+.todoListArray{
+    width : 99%;
+    height : 100%;
+    overflow: scroll;
+    padding-right : 1%;
+}
+
+.todoListArray > li{
+    margin-bottom : 1vh;
+    padding-bottom : 1vh;
+    border-bottom : 1px solid black;
+    font-size : 2.4rem;
+    display : flex;
+    justify-content: space-between;
+}
+
+.todoListArray > li > button {
+    margin-left : 0.2vw;
+}
+#todoInput::placeholder{
+    font-weight: 400;
+}
+
+.guideText{
+    font-size:8rem;
+    padding:5rem;
+    text-align:center;
+}
+
+.subBox{
+    width:50%;
+    height:100vh;
+    padding : 1%;
+}
+
+.linkBox{
+    display: flex;
+    list-style: none;
+    font-size : 2.8rem;
+}
+
+.linkBox > li{
+    margin-right : 1vw;
+}
+
+.linkBox > li :hover{
+    color: rgba(109, 108, 50, 0.795);
+}
+
+
+
+.linkBoxTitle{
+    font-size : 2.8rem;
+    padding-bottom : 1%;
+}
+
+/* 반응형 */
+@media screen and (max-width : 620px ) {
+    /* header */
+    header{
+        justify-content: center;
+        
+    }
+    .clockBox{
+        width:100%;
+    }
+    .quoteBox{
+        display: none;
+        width: 100%;
+        text-align: center;
+    }
+    #greeting{
+        display:none;
+        text-align: center;
+        width: 100%;
+    }
+    .movePages{
+        display : inline;
+    }
+    /* main */
+    main{
+        display:flex;
+        flex-direction: column;
+    }
+    .subBox{
+        display: flex;
+        width:100vw;
+        flex-direction: column;
+        align-items: center;
+    }
+    .todoBox {
+        width : 100vw;
+        height : 50%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .todoFormBox{
+        width: 100%;
+        justify-content: space-around;
+    }
+    .todoListArray{
+        width : 80%;
+    }
+    .guideText{
+        font-size:5rem;
+    }
+}
