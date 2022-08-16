@@ -9,6 +9,10 @@
     <script src="https://kit.fontawesome.com/4a84dbfbba.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <div class="container">
+        <div class="imgBox">
+        </div>
+    </div>
     <header>
     <form action="" id ="loginForm">
         <input type="text" 
@@ -45,14 +49,19 @@
             <ul class="todoListArray">
                 <h1 class="guideText">TODOLIST 를 작성해보세요</h1>
             </ul>
+        </div>
+        <div class="subBox">
             <span class = "boxTitle">오늘의 진행도!</span>
             <div class="todoProgressBox">
                <div class="todoProgressBar">
                 <div class="todoProgressBar_completion"></div>
                </div>
             </div>
-        </div>
-        <div class="subBox">
+            <h1 class="boxTitle">오늘의 날씨</h1>
+            <div class="weatherBox">
+                <span class="city">위치</span>
+                <span class="weather">날씨</span>
+            </div>
             <h1 class="boxTitle">바로가기</h1>
             <div class="linkBox">
                 <li><a href ="https://www.youtube.com/"><i class="fab fa-youtube"></i></i>YOUTUBE</a></li>
@@ -64,5 +73,7 @@
     <script src="js/clock.js"></script>
     <script src="js/quote.js"></script>
     <script src="js/todo.js"></script>
+    <script src="js/background.js"></script>
+    <script src="js/weather.js"></script>
 </body>
 </html>

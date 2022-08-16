@@ -26,15 +26,22 @@ html{
 ::-webkit-scrollbar{
     display :none;
 }
-
-.imgBox{
+.container
+{
+    height : 100vh;
+    width: 100vw;
     position : absolute;
     z-index: -3;
-    width:100vw;
-    height:100vh;
+    opacity: 0.8;
+}
+.imgBox{
+    width:100%;
+    height:100%;
+    margin: 0 auto;
     background-image: url(/img/wallpaperbetter.jpg);
     background-repeat:no-repeat;
-    background-size: 100%;
+    background-size: 100% 100%;
+    background-position: center center;
 }
 a{
     text-decoration: none;
@@ -45,15 +52,18 @@ a{
 .checked{
     text-decoration: line-through;
 }
+body{
+    height:100vh;
+}
 /*header*/
 
 header{
     display:flex;
     justify-content: space-between;
     align-items: center;
-    background-color: rgba(248, 246, 141,0.3);
     padding : 1% 2%;
-    height : 10vh;
+    height : 20%;
+    border-bottom : 1p
 }
 
 #loginForm{
@@ -62,7 +72,7 @@ header{
 
 #loginInput{
     border :none;
-    border-bottom : 1px solid rgba(0,0,0,0.2);
+    border-bottom : 1px solid rgba(0,0,0,0.3);
     padding-bottom : 1vh;
     outline: none;
     font-weight:bold;
@@ -81,13 +91,13 @@ header{
 }
 
 #greeting{
-    font-size : 3.2rem;
+    font-size : 6.4rem;
     width : 33%;
     text-align: start;
 }
 
 #clock{
-    font-size : 4.8rem;
+    font-size : 6.4rem;
 }
 .clockBox{
     width : 33%;
@@ -107,7 +117,7 @@ header{
 }
 
 #quote{
-    font-size : 3.2rem;
+    font-size : 4.8rem;
 }
 
 #author{
@@ -125,8 +135,7 @@ main{
     padding : 2% 2%;
     display:flex;
     overflow: hidden;
-    height : 75vh;
-    background-color: rgba(255,255,255,0.3);
+    height : 60%;
 }
 
 #todoInput{
@@ -195,6 +204,7 @@ main{
     display: flex;
     list-style: none;
     font-size : 2.8rem;
+    padding : 2%;
 }
 
 .linkBox > li{
@@ -206,9 +216,10 @@ main{
 }
 
 .todoProgressBox{
-    height: 40%;
-    width : 90%;
+    height: 5%;
+    width : 80%;
     padding : 4%;
+    margin-bottom : 3%;
 }
 
 .todoProgressBar{
@@ -223,6 +234,13 @@ main{
     text-align: center;
     font-size : 4.8rem;
     background-color: aquamarine;
+}
+
+.weatherBox{
+    display:flex;
+    flex-direction: column;
+    font-size: 4.8rem;
+    padding : 3%;
 }
 .boxTitle{
     font-size : 2.8rem;
